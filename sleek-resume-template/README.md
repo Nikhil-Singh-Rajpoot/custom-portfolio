@@ -3,6 +3,13 @@
 
 A sleek, fully-responsive portfolio template that can be used as a web résumé. Built with React, TypeScript, Tailwind CSS, and Framer Motion.
 
+![image](https://github.com/user-attachments/assets/b5b6c34d-b173-4393-8bac-173796f0c7f4)
+![image](https://github.com/user-attachments/assets/6fa784c4-ad15-4224-a639-642b8082cff1)
+![image](https://github.com/user-attachments/assets/8bd50835-0fe9-4c12-b921-13a325014821)
+![image](https://github.com/user-attachments/assets/9c18547e-8e34-4112-bb42-1343ed97feeb)
+![image](https://github.com/user-attachments/assets/50d229f4-abb6-41d7-854e-0dc04d3ae39a)
+
+
 ## ✨ Features
 
 - **Single Page Layout**: Smooth scroll navigation via anchor links
