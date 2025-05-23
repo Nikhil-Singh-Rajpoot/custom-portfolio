@@ -2,15 +2,11 @@
 
 This project allows you to build beautiful, customizable one-page resumes.
 
-**URL**: https://your-resume-builder.com
+![image](https://github.com/user-attachments/assets/62c4b7b6-9bd6-4708-80e2-c2b334819105)
+![image](https://github.com/user-attachments/assets/e07314ff-9365-4d64-8944-75d972d98e92)
+![image](https://github.com/user-attachments/assets/131c82b0-4217-4b0d-b7e9-a1cc4d838ffa)
+![image](https://github.com/user-attachments/assets/73dec0a9-9976-40c5-a687-a5e6405aec8d)
 
-## Getting Started
-
-**Use Resume Builder**
-
-Simply visit the [Resume Builder Project](https://your-resume-builder.com) and start customizing.
-
-Changes made via the builder will be committed automatically to this repo.
 
 ## Working Locally
 
@@ -60,12 +56,34 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Resume Builder](https://your-resume-builder.com) and click on Share -> Publish.
+1. Fork this repository
+2. Connect your GitHub account to Netlify
+3. Import the repository with these build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+4. Deploy!
 
-## Can I connect a custom domain to my project?
+```sh
+npm install -g netlify-cli
+netlify deploy
+```
 
-Yes, you can connect a custom domain to your project.
+## 🛠️ Customization
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Changing Colors
 
-Read more here: [Setting up a custom domain](https://docs.your-resume-builder.com/tips-tricks/custom-domain#step-by-step-guide)
+Edit the CSS variables in `src/index.css` to change the color scheme:
+
+```css
+:root {
+  --primary: 221 83% 53%;
+  --accent: 176 68% 64%;
+  /* other colors... */
+}
+```
+
+### Adding New Sections
+
+1. Create a new component in `/src/sections/`
+2. Add the corresponding data in `/src/data/profile.ts`
+3. Import and add the component to `App.tsx`
