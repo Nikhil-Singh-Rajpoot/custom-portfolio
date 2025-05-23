@@ -3,7 +3,10 @@
 
 A cinematic portfolio site with dark theme, neon accents, and interactive animations. Built with React, TypeScript, Tailwind CSS, Framer Motion, and Three.js.
 
-![Portfolio Preview](screenshot.png)
+![image](https://github.com/user-attachments/assets/57391f75-09f5-4d03-8de5-b871644231e6)
+![image](https://github.com/user-attachments/assets/f22db5cd-da32-49f4-83b3-7b6029a08fe7)
+![image](https://github.com/user-attachments/assets/c6ed43d2-e8c2-4176-be97-2c8de6fa2876)
+
 
 ## Features
 
