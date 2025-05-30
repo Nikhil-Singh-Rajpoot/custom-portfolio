@@ -22,15 +22,15 @@ const ContactSection: React.FC = () => {
    const scriptURL = 'https://script.google.com/macros/s/AKfycby4lpOVY588Kk8dqqdZhUphei0FZOG9hxhJfERtr4DAgtd1BMMVwGMTi1hy4u0sJ__B/exec';
     const form = document.forms['google-sheet'];
 
-  // Handle form submission
-  form.addEventListener('submit', (e: { preventDefault: () => void; })=> {
-    e.preventDefault()
-     fetch(scriptURL, {method: 'POST', body: new FormData(form)})
-    .then(response => alert
-      ("Thank you for your message. I'll get back to you soon."))
-      .catch(error => console.error('Error!', error.message)
-    )
-  });
+  // // Handle form submission
+  // form.addEventListener('submit', (e: { preventDefault: () => void; })=> {
+  //   e.preventDefault()
+  //    fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+  //   .then(response => alert
+  //     ("Thank you for your message. I'll get back to you soon."))
+  //     .catch(error => console.error('Error!', error.message)
+  //   )
+  // });
 
 
   const handleSubmit = (e: React.FormEvent) => {
