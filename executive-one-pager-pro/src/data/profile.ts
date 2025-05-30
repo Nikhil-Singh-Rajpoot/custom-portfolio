@@ -1,3 +1,5 @@
+import { percent } from "framer-motion";
+
 // Single source of truth for the entire portfolio
 export interface ProfileData {
   basics: {
@@ -6,6 +8,7 @@ export interface ProfileData {
     email: string;
     phone: string;
     location: string;
+    aboutSummary?: string;
     summary: string;
     picture?: string;
     links: Array<{
@@ -40,6 +43,7 @@ export interface ProfileData {
     start: string;
     end: string;
     location?: string;
+    percent?: string;
     gpa?: string;
     achievements?: string[];
   }>;
@@ -67,28 +71,31 @@ export interface ProfileData {
 
 const profile: ProfileData = {
   basics: {
-    name: "Jane Doe",
+    name: "Nikhil Kumar Singh",
     title: "Software Development Engineer",
-    email: "jane.doe@example.com",
-    phone: "+91-98765-43210",
-    location: "Bengaluru, India",
-    summary: "Full-stack developer with 3+ years of experience in building scalable web applications. Passionate about creating efficient, maintainable code and delivering exceptional user experiences. Expertise in React, TypeScript, and cloud-native architectures.",
-    picture: "/placeholder.svg",
+    email: "nikhilkumarsingh2000@gmail.com",
+    phone: "+91-7272090004",
+    location: "Noida, India",
+    aboutSummary: "I’m Nikhil, a Post Graduate in Computer Applications with a strong academic background in computer science and a deep passion for Full-Stack Web Development. Throughout my studies, I have consistently nurtured my interest in designing and developing dynamic, user-centric, and scalable web applications.I have hands-on experience working with front-end technologies like HTML, CSS, JavaScript, and React, and back-end tools such as Java, JDBC, Spring Boot, and Hibernate, along with MySQL for database management. I understand how different components of a full-stack application come together to create seamless digital experiences.My passion for coding goes beyond the classroom—I'm constantly learning new frameworks, practicing through personal projects, and keeping up with the latest trends in web development. I enjoy problem-solving, writing clean and efficient code, and turning ideas into reality through technology.I’m a self-driven, curious learner with a strong belief in continuous growth. My goal is to apply my skills in a real-world environment, contribute to impactful projects, and grow as a developer within a collaborative team.",
+    summary: "Aspiring Full-Stack Developer with a solid foundation in both front-end and back-end development. Proficient in front-end technologies like HTML, CSS, JavaScript, and React, and skilled in back-end tools including Java, JDBC, Spring Boot, Hibernate, and RESTful APIs. Experienced in working with MySQL databases and building CRUD-based applications. Passionate about developing user-friendly, scalable, and efficient web applications with clean, maintainable code. Continuously learning through self-driven projects and hands-on practice, with a strong interest in problem-solving and keeping up with emerging technologies. Eager to contribute to real-world projects and grow as a developer in a collaborative team environment.",
+    picture: "/photo.png",
     links: [
-      { label: "LinkedIn", url: "#YOUR_LINKEDIN_URL" },
-      { label: "GitHub", url: "#YOUR_GITHUB_URL" },
-      { label: "Twitter", url: "#YOUR_TWITTER_URL" },
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/nikhilsingh9312/" },
+      { label: "GitHub", url: "https://github.com/Nikhil-Singh-Rajpoot" },
+      { label: "Instagram", url: "https://www.instagram.com/nikkhil__rajpoot/" },
     ]
   },
   skills: [
-    { name: "JavaScript / TypeScript", level: 90 },
-    { name: "React", level: 85 },
-    { name: "Node.js", level: 80 },
+    { name: "Java", level: 90 },
+    { name: "JDBC", level: 80 },
+    { name: "SpringBoot", level: 85 },
     { name: "HTML/CSS", level: 90 },
-    { name: "AWS", level: 75 },
-    { name: "Docker", level: 70 },
-    { name: "GraphQL", level: 65 },
-    { name: "SQL", level: 80 },
+    { name: "JavaScript", level: 95 },
+    { name: "Hibernate", level: 80 },
+    { name: "Spring Security", level: 75 },
+    { name: "MySQL", level: 80 },
+    { name: "ORM Tool", level: 85 },
+     { name: "Spring MVC", level: 80 },
   ],
   experience: [
     {
@@ -130,90 +137,111 @@ const profile: ProfileData = {
   ],
   projects: [
     {
-      name: "E-Commerce Platform",
-      description: "A full-featured online shopping platform with real-time inventory management, payment processing, and admin dashboard.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe API", "AWS"],
-      link: "#ECOMMERCE_PROJECT_REPO_URL",
+      name: "TheCodeChamp, Learning Platform",
+      description: "TheCodeChamp is a learning platform focused on empowering students and aspiring developers through quality technical training. We provide hands-on training programs, study notes, quizzes, and previous year question papers for Computer Science, BCA, MCA, and IT students—bridging the gap between academics and industry needs.(Host only frontend part, backend is hosted on Github)",
+      technologies: ["Java", "HTML/CSS", "Spring Boot", "Rest APIs", "Spring JPA", "OAuth", "GoDaddy","Spring Security","JWT","Autometed Email","javaScript"],
+      link: "http://www.thecodechamp.in/",
+    },
+     {
+      name: "Photography Website",
+      description: "The Photography Website is a fully responsive static website designed using HTML, CSS, JavaScript, and Bootstrap. It serves as a professional online portfolio for photographers to showcase their work, promote their services, and attract potential clients with an eye-catching design and smooth navigation.",
+      technologies: ["HTML/CSS","JavaScript", "Bootstrap"],
+      link: "https://devloperdevansh.github.io/PhotographyWeb/?fbclid=PAZXh0bgNhZW0CMTEAAacH8iKpUHhs_eO5OQBVpvYgJf5OvWVVt312AujtUIIW23THoYAd_Dr7hNFrWw_aem_HfGW9UjOBnH8-TTzwZEw2w",
     },
     {
-      name: "Health Monitoring App",
-      description: "Mobile application that tracks health metrics, sends reminders, and generates reports for healthcare providers.",
-      technologies: ["React Native", "Firebase", "Chart.js", "OAuth"],
-      link: "#HEALTH_APP_REPO_URL",
+      name: "Sweet Shop, Porfolio (Client)",
+      description: "The SweetShop Web Project is a beautifully designed static website developed using HTML, CSS, JavaScript, and Bootstrap. It showcases an elegant and user-friendly interface that represents a modern sweet shop, aimed at offering customers a seamless browsing experience through various sweet categories and product details.",
+      technologies: ["HTML/CSS", "JavaScript", "Excel"],
+      link: "https://nikhil-singh-rajpoot.github.io/SweetShop/",
     },
     {
-      name: "Content Management System",
-      description: "Custom CMS with role-based access control, content scheduling, and SEO optimization tools.",
-      technologies: ["TypeScript", "Express.js", "PostgreSQL", "Redis"],
-      link: "#CMS_PROJECT_REPO_URL",
-    }
+      name: "Searching App",
+      description: "The Searching App is a dynamic web application built using Spring Boot (Java) for the backend and JSP (JavaServer Pages) for the frontend. The main objective of this project is to allow users to search for data through a web interface and display real-time search results on the client side based on the user's query.",
+      technologies: ["Java", "Spring Boot", "JSP","JavaScript","Rest APIs"],
+      link: "https://github.com/Nikhil-Singh-Rajpoot/SearchApp.github.io",
+    },
+    {
+      name: "Truck MGT System",
+      description: "The Truck Management System, also known as Truck MGT, is a console-based application developed using Core Java. The project is designed to manage and organize the data of trucks, including their details, availability, assignments, and drivers. This project applies the fundamental concepts of Object-Oriented Programming (OOPs), including Encapsulation, Abstraction, Inheritance, and Polymorphism.",
+      technologies: ["Java", "JDBC", "OOPs"],
+      link: "https://github.com/Nikhil-Singh-Rajpoot/TruckMGT",
+    },
+    {
+      name: "E-commerce website",
+      description: "The E-Commerce Project is a fully functional web-based shopping platform developed using Java Servlets, JSP (JavaServer Pages)/Thymeleaf, and JDBC (Java Database Connectivity) for backend operations. The project provides complete functionality for both customers and administrators, simulating a real-world online shopping experience.",
+      technologies: ["Java", "Servlet", "JSP/Thymeleaf","JavaScript","Rest APIs"],
+      link: "https://github.com/Nikhil-Singh-Rajpoot/E-commerceProject",
+    },
   ],
   education: [
     {
-      institution: "Indian Institute of Technology",
-      degree: "Bachelor of Technology",
-      field: "Computer Science",
-      start: "2019",
-      end: "2023",
-      location: "Mumbai, India",
-      gpa: "3.8/4.0",
+      institution: "Veer Bahadur Singh Purvanchal University Jaunpur U.P",
+      degree: "Master's",
+      field: "Computer Applications (M.C.A)",
+      start: "2023",
+      end: "2025",
+      location: "Jaunpur, Uttar Pradesh",
+      gpa: "8.6/10",
       achievements: [
         "Dean's List for academic excellence (all semesters)",
         "Best Final Year Project Award",
-        "Merit scholarship recipient"
+        // "Merit scholarship recipient"
       ]
     },
     {
-      institution: "Online Learning Platform",
-      degree: "Professional Certification",
-      field: "Cloud Architecture",
-      start: "2022",
-      end: "2022",
+      institution: "Veer Bahadur Singh Purvanchal University Jaunpur U.P",
+      degree: "Bachelor",
+      field: "Computer Applications (B.C.A)",
+      start: "2020",
+      end: "2023",
+      location: "Jaunpur, Uttar Pradesh",
+      gpa: "Percent 81%",
       achievements: [
-        "Completed with distinction",
-        "Capstone project featured in platform showcase"
+        "Dean's List for academic excellence (all semesters)",
+        "Best Final Year Project Award",
       ]
     }
   ],
   achievements: [
     {
-      title: "Hackathon Winner",
+      title: "Nation Engineering Day (Quiz)",
       date: "2022",
-      issuer: "TechCon India",
-      description: "First place in a 48-hour coding challenge, developing an accessibility solution for visually impaired users"
+      issuer: "University India",
+      description: "First place in a 4-hour Quiz challenge,"
     },
     {
-      title: "Open Source Contributor",
-      date: "2021-Present",
-      description: "Active contributor to React ecosystem libraries with 5+ merged pull requests"
+      title: "Codding Competition",
+      issuer: "University India",
+      date: "2024",
+      description: "First place in a 4-hour coding challenge, developing an accessibility solution for visually impaired users"
     },
     {
-      title: "Technical Article Publication",
+      title: "Teaching on College",
       date: "2023",
-      issuer: "Dev.to",
-      description: "Published 'Optimizing React Performance' tutorial with 10,000+ views"
+      issuer: "University India",
+      description: "Win reward from the university in the Teaching skill,"
     }
   ],
   extracurricular: [
     {
       organization: "Code for Change",
       role: "Volunteer Developer",
-      start: "2022",
-      end: "Present",
+      start: "2023",
+      end: "2023",
       description: "Develop web applications for non-profit organizations to address social challenges"
     },
     {
-      organization: "Women Who Code",
-      role: "Community Mentor",
-      start: "2021",
-      end: "Present",
-      description: "Mentored 10+ aspiring women developers, provided code reviews and career guidance"
+      organization: "Dance Competition in College",
+      role: "Group Leader",
+      start: "2022",
+      end: "2022",
+      description: "Monitor our group or prepare our dance and got price."
     }
   ],
   contact: {
-    email: "jane.doe@example.com",
-    phone: "+91-98765-43210",
-    location: "Bengaluru, India",
+    email: "nikhilkumarsingh2000@gmail.com",
+    phone: "+91-7272090004",
+    location: "Noida, India",
     availability: "Open to full-time opportunities",
     message: "Feel free to reach out for project collaborations, job opportunities, or just a friendly chat about technology!"
   }

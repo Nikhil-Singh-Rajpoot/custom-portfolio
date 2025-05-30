@@ -14,7 +14,7 @@ const AboutSection: React.FC = () => {
           
           <div className="max-w-3xl text-center">
             <p className="text-lg mb-6">
-              {profile.basics.summary}
+              {profile.basics.aboutSummary}
             </p>
             
             <div className="flex flex-wrap gap-6 justify-center mt-8 text-sm">
