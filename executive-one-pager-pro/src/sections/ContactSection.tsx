@@ -19,10 +19,15 @@ const ContactSection: React.FC = () => {
       [e.target.name]: e.target.value,
     });
   };
-  
+   const scriptURL = 'https://script.google.com/macros/s/AKfycby4lpOVY588Kk8dqqdZhUphei0FZOG9hxhJfERtr4DAgtd1BMMVwGMTi1hy4u0sJ__B/exec';
+    const form = document.forms['google-sheet'];
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+    fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+    .then(response => alert
+      ("Thank you for your message. I'll get back to you soon.")
+    )
     // In a real application, this would send the form data to a server
     console.log('Form submitted:', formData);
     
