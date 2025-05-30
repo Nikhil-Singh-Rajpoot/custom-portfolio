@@ -23,7 +23,7 @@ const ContactSection: React.FC = () => {
     const form = document.forms['google-sheet'];
 
   // Handle form submission
-  form.addEventListener('submit', e=> {
+  form.addEventListener('submit', (e: { preventDefault: () => void; })=> {
     e.preventDefault()
      fetch(scriptURL, {method: 'POST', body: new FormData(form)})
     .then(response => alert
