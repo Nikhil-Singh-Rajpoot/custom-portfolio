@@ -2,6 +2,7 @@
 import profile from '@/data/profile';
 import AnimatedSection from '@/components/AnimatedSection';
 import { motion } from 'framer-motion';
+import photo from '../../public/photo.png';
 
 const HeroSection: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
             >
               <img 
-                src={profile.basics.picture} 
+                src={photo} 
                 alt={profile.basics.name} 
                 className="w-full h-full object-cover"
                 loading="lazy"
