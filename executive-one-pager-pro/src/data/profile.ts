@@ -1,5 +1,5 @@
 import { percent } from "framer-motion";
-
+import photo from "../../public/photo.png";
 // Single source of truth for the entire portfolio
 export interface ProfileData {
   basics: {
@@ -78,7 +78,7 @@ const profile: ProfileData = {
     location: "Noida, India",
     aboutSummary: "I’m Nikhil, a Post Graduate in Computer Applications with a strong academic background in computer science and a deep passion for Full-Stack Web Development. Throughout my studies, I have consistently nurtured my interest in designing and developing dynamic, user-centric, and scalable web applications.I have hands-on experience working with front-end technologies like HTML, CSS, JavaScript, and React, and back-end tools such as Java, JDBC, Spring Boot, and Hibernate, along with MySQL for database management. I understand how different components of a full-stack application come together to create seamless digital experiences.My passion for coding goes beyond the classroom—I'm constantly learning new frameworks, practicing through personal projects, and keeping up with the latest trends in web development. I enjoy problem-solving, writing clean and efficient code, and turning ideas into reality through technology.I’m a self-driven, curious learner with a strong belief in continuous growth. My goal is to apply my skills in a real-world environment, contribute to impactful projects, and grow as a developer within a collaborative team.",
     summary: "Aspiring Full-Stack Developer with a solid foundation in both front-end and back-end development. Proficient in front-end technologies like HTML, CSS, JavaScript, and React, and skilled in back-end tools including Java, JDBC, Spring Boot, Hibernate, and RESTful APIs. Experienced in working with MySQL databases and building CRUD-based applications. Passionate about developing user-friendly, scalable, and efficient web applications with clean, maintainable code. Continuously learning through self-driven projects and hands-on practice, with a strong interest in problem-solving and keeping up with emerging technologies. Eager to contribute to real-world projects and grow as a developer in a collaborative team environment.",
-    picture: "/photo.png",
+    picture: "{/photo.png}",
     links: [
       { label: "LinkedIn", url: "https://www.linkedin.com/in/nikhilsingh9312/" },
       { label: "GitHub", url: "https://github.com/Nikhil-Singh-Rajpoot" },
